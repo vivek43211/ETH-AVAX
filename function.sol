@@ -1,7 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+// Functionality or requiements
+// Contract successfully uses require()
+// Contract successfully uses assert()
+// Contract successfully uses revert() statements
 
-contract ExampleContract {
+
+contract Contract {
     address public owner;
     uint256 public value;
 
@@ -27,6 +32,6 @@ contract ExampleContract {
     }
 
     function revertExample() public pure {
-        revert("This is a revert example");
+        revert("This is a revert");
     }
 }
