@@ -23,6 +23,22 @@ function setValue(uint256 _value) public {
 "It uses require(msg.sender == owner, "Only the owner can reset the value") to ensure only the owner can call this function."
 "The value is set to zero, and assert(value == 0) checks that the assignment was successful."
 
+```solidity
+function resetValue() public {
+        require(msg.sender == owner, "Only the owner can reset the value");
+
+        value = 0;
+
+        assert(value == 0); // This should always be true
+    }
+```
+
 ###Function: revertExample
 
 "The revertExample function demonstrates the use of the revert() statement. This function will always revert the transaction with the message 'This is a revert example'. This is useful for showing how revert() can be used to terminate a function and provide a specific error message."
+
+```solidity
+function revertExample() public pure {
+        revert("This is a revert ");
+    }
+```
