@@ -2,9 +2,13 @@
 ETH + AVAX PROOF: Intermediate EVM Course
 
 ###Function: setValue
+<br>
 "The setValue function allows the owner to set the value of the value variable."
+<br>
 "First, it uses require(msg.sender == owner, "Only the owner can set the value") to ensure that only the owner can call this function. If this condition is not met, the transaction is reverted, and the message 'Only the owner can set the value' is returned."
+<br>
 "Next, it uses require(_value > 0, "Value must be greater than zero") to ensure the new value is greater than zero. If this condition is not met, the transaction is reverted, and the message 'Value must be greater than zero' is returned."
+<br>
 "The value is then set to the new value, and assert(value == _value) is used to check that the assignment was successful. If the assertion fails, it indicates a critical error in the contract logic."
 
 ```solidity
