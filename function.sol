@@ -6,7 +6,7 @@ pragma solidity ^0.8.0;
 // Contract successfully uses revert() statements
 
 
-contract Contract {
+contract Demo_Contract {
     address public owner;
     uint256 public value;
 
