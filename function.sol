@@ -30,8 +30,12 @@ contract Demo_Contract {
 
         assert(value == 0); // This should always be true
     }
+   function withdraw(uint256 amount) public {
+        require(msg.sender == owner, "Only the owner can withdraw funds");
+        if (amount > value) {
+            revert("Insufficient balance for withdrawal");
+        }
 
-    function revertExample() public pure {
-        revert("This is a revert");
+        value -= amount;
     }
 }
